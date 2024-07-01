@@ -31,7 +31,7 @@ This is a backend application for mood sensing and analysis, developed using Nod
    ```
 
 4. Start the server:
-   ```bash
+   ```
    npm start
    ```
 
@@ -106,11 +106,13 @@ Authorization: Bearer <jwttoken>
    - Register a new user:
      ```http
      POST /api/users/register
+     ```
      Content-Type: application/json
      {
        "username": "testuser",
        "password": "password"
      }
+     ```
      ```
 
    - Log in to get a JWT token:
