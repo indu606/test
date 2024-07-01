@@ -24,7 +24,7 @@ This is a backend application for mood sensing and analysis, developed using Nod
    ```
 
 2. Create a `.env` file in the root directory with the following content:
-   ```env
+   ```
    PORT=5000
    MONGO_URI=mongodbconnstring
    JWT_SECRET=jwtsecretToSignToken
