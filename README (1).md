@@ -19,7 +19,7 @@ This is a backend application for mood sensing and analysis, developed using Nod
 ### Installation
 
 1. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 
