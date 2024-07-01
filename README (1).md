@@ -38,7 +38,7 @@ This is a backend application for mood sensing and analysis, developed using Nod
 ## API Endpoints
 
 ### Register a new user
-```http
+```
 POST /api/users/register
 Content-Type: application/json
 
@@ -49,7 +49,7 @@ Content-Type: application/json
 ```
 
 ### Authenticate user and get JWT token
-```http
+```
 POST /api/users/login
 Content-Type: application/json
 
@@ -60,7 +60,7 @@ Content-Type: application/json
 ```
 
 ### Upload a mood capture
-```http
+```
 POST /api/moods
 Content-Type: application/json
 Authorization: Bearer <jwttoken>
@@ -73,13 +73,13 @@ Authorization: Bearer <jwttoken>
 ```
 
 ### Get mood frequency distribution for a user
-```http
+```
 GET /api/moods/frequency/:userId
 Authorization: Bearer <jwttoken>
 ```
 
 ### Find the closest location where the user has been happy
-```http
+```
 POST /api/moods/happy-location
 Content-Type: application/json
 Authorization: Bearer <jwttoken>
@@ -89,61 +89,6 @@ Authorization: Bearer <jwttoken>
   "currentLocation": [latitude, longitude]
 }
 ```
-
-## Running the Application
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Start the server:
-   ```bash
-   npm start
-   ```
-
-3. If we use Postman to interact with the API:
-   - Register a new user:
-     ```http
-     POST /api/users/register
-     ```
-     Content-Type: application/json
-     {
-       "username": "testuser",
-       "password": "password"
-     }
-     ```
-     ```
-
-   - Log in to get a JWT token:
-     ```http
-     POST /api/users/login
-     Content-Type: application/json
-     {
-       "username": "testuser",
-       "password": "password"
-     }
-     ```
-
-   - Use the token for creating mood entries:
-     ```http
-     POST /api/moods
-     Content-Type: application/json
-     Authorization: Bearer <your_jwt_token>
-     {
-       "userId": "userid"
-       "moodType": "happy",
-       "location": [latitude, longitude]
-     }
-     ```
-
-   - Find the closest location where the user has been happy:
-     ```http
-     POST /api/moods/happy-location
-     Content-Type: application/json
-     Authorization: Bearer <jwttoken>
-     {
-       "userId": "userid",
-       "currentLocation": [latitude, longitude]
-     }
-     ```
+### Tests
+``` Not implemented due to Time Crunch but there are many Test Frameworks we can use like Jest or Mocha and can use the SuperTest also for testing Http requests.
+```
